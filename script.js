@@ -9,6 +9,48 @@ let secondCount = document.getElementById('secondCount')
 
 
 // Delate Button
+
+const delateBtn1 = document.getElementById('delate-btn1')
+delateBtn1.addEventListener('click', function () {
+    delateBtn1.parentNode.parentNode.remove();
+    calculateCount();
+})
+const delateBtn2 = document.getElementById('delate-btn2')
+delateBtn2.addEventListener('click', function () {
+    delateBtn2.parentNode.parentNode.remove();
+    calculateCount();
+})
+const delateBtn3 = document.getElementById('delate-btn3')
+delateBtn3.addEventListener('click', function () {
+    delateBtn3.parentNode.parentNode.remove();
+    calculateCount();
+})
+const delateBtn4 = document.getElementById('delate-btn4')
+delateBtn4.addEventListener('click', function () {
+    delateBtn4.parentNode.parentNode.remove();
+    calculateCount();
+})
+const delateBtn5 = document.getElementById('delate-btn5')
+delateBtn5.addEventListener('click', function () {
+    delateBtn5.parentNode.parentNode.remove();
+    calculateCount();
+})
+const delateBtn6 = document.getElementById('delate-btn6')
+delateBtn6.addEventListener('click', function () {
+    delateBtn6.parentNode.parentNode.remove();
+    calculateCount();
+})
+const delateBtn7 = document.getElementById('delate-btn7')
+delateBtn7.addEventListener('click', function () {
+    delateBtn7.parentNode.parentNode.remove();
+    calculateCount();
+})
+const delateBtn8 = document.getElementById('delate-btn8')
+delateBtn8.addEventListener('click', function () {
+    delateBtn8.parentNode.parentNode.remove();
+    calculateCount();
+})
+
 // const delateBtn = document.getElementsByClassName('delate-btn');
 // delateBtn.addEventListener("click", function (event) {
 //     const delate = this.parentNode.parentNode.classList.add('hidden');
@@ -16,13 +58,6 @@ let secondCount = document.getElementById('secondCount')
 // delate.remove();
 //})
 
-// if (event.target.closest('.delete-btn')) {
-
-//     const card = event.target.closest('.job-card');
-//     card.remove();
-
-//     calculateCount();
-// }
 
 
 
