@@ -8,6 +8,14 @@ let rejected = document.getElementById('rejected');
 let secondCount = document.getElementById('secondCount')
 
 
+
+const delateBtn = document.getElementById('delate-btn').addEventListener("click", function () {
+    const delate = this.parentNode.parentNode;
+    delate.remove();
+})
+
+
+
 const allFilterBtn = document.getElementById('all-filter-btn')
 const interviewFilterBtn = document.getElementById('interview-filter-btn')
 const rejectedFilterBtn = document.getElementById('rejected-filter-btn')
@@ -24,6 +32,18 @@ function calculateCount() {
     rejected.innerText = rejectedList.length;
     //secondCount
     secondCount.innerText = allJobsSection.children.length;
+
+    if (allJobsSection.children.length === 0 && currentStatus === 'all-filter-btn') {
+        allJobsSection.innerHTML = `
+        <div class="text-center flex flex-col justify-center align-middle py-60">
+        <div class="flex justify-center">
+        <img class="" src="./img/jobs.png">
+        </div>
+        <p class="text-2xl text-[#002C5C]">No jobs available</p>
+        <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+    </div>
+    `;
+    }
 }
 
 calculateCount();
@@ -144,6 +164,20 @@ mainContainer.addEventListener('click', function (event) {
 
 
 function renderInterview() {
+
+    if (interviewList.length === 0) {
+        filteredSection.innerHTML = `
+        <div class="text-center flex flex-col justify-center align-middle py-60">
+        <div class="flex justify-center">
+        <img class="" src="./img/jobs.png">
+        </div>
+        <p class="text-2xl text-[#002C5C]">No jobs available</p>
+        <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+    </div>
+    `;
+        return;
+    }
+
     filteredSection.innerHTML = ''
 
 
@@ -158,25 +192,23 @@ function renderInterview() {
                     <!-- part 1 -->
                     <div>
                         <h1 class="cardTitle text-xl text-[#002C5C] font-semibold">${interview.cardTitle}</h1>
-                        <p class="positionName">React Native Developer</p>
-                        <p class="jobDes">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="positionName">${interview.positionName}</p>
+                        <p class="jobDes">${interview.jobDes}}</p>
                     </div>
                     <!-- part 2 -->
                     <div>
-                        <p class="staTus">${interview.staTus}</p>
-                        <p class="nodes">Build cross-platform mobile applications using React Native. Work on products
-                            used by
-                            millions of users worldwide.</p>
+                        <p class="staTus badge badge-accent text-white">${interview.staTus}</p>
+                        <p class="nodes">${interview.nodes}</p>
                     </div>
                     <div class=" flex gap-3">
-                        <button class="interview-btn btn btn-outline btn-accent">INTERVIEW</button><button
-                            class="reject-btn btn btn-outline btn-error">REJECTED</button>
+                        <button class="interview-btn btn btn-outline btn-accent py-4">INTERVIEW</button><button
+                            class="reject-btn btn btn-outline btn-error py-4">REJECTED</button>
                     </div>
 
                 </div>
                 <!-- main part-2 -->
                 <div>
-                    <button class="btn rounded-full btn-outline"><i class="fa-solid fa-trash"></i></button>
+                    <button id="delate-btn" class="btn rounded-full btn-outline"><i class="fa-solid fa-trash"></i></button>
                 </div>
         `
         filteredSection.appendChild(div)
@@ -184,6 +216,20 @@ function renderInterview() {
 }
 
 function renderReject() {
+
+    if (interviewList.length === 0) {
+        filteredSection.innerHTML = `
+        <div class="text-center flex flex-col justify-center align-middle py-60">
+        <div class="flex justify-center">
+        <img class="" src="./img/jobs.png">
+        </div>
+        <p class="text-2xl text-[#002C5C]">No jobs available</p>
+        <p class="text-[#64748B]">Check back soon for new job opportunities</p>
+    </div>
+    `;
+        return;
+    }
+
     filteredSection.innerHTML = ''
 
 
@@ -198,25 +244,23 @@ function renderReject() {
                     <!-- part 1 -->
                     <div>
                         <h1 class="cardTitle text-xl text-[#002C5C] font-semibold">${reject.cardTitle}</h1>
-                        <p class="positionName">React Native Developer</p>
-                        <p class="jobDes">Remote • Full-time • $130,000 - $175,000</p>
+                        <p class="positionName">${reject.positionName}</p>
+                        <p class="jobDes">${reject.jobDes}</p>
                     </div>
                     <!-- part 2 -->
                     <div>
-                        <p class="staTus">${reject.staTus}</p>
-                        <p class="nodes">Build cross-platform mobile applications using React Native. Work on products
-                            used by
-                            millions of users worldwide.</p>
+                        <p class="staTus badge badge-error text-white">${reject.staTus}</p>
+                        <p class="nodes">${reject.nodes}</p>
                     </div>
                     <div class=" flex gap-3">
-                        <button class="interview-btn btn btn-outline btn-accent">INTERVIEW</button><button
-                            class="reject-btn btn btn btn-outline btn-error">REJECTED</button>
+                        <button class="interview-btn btn btn-outline btn-accent py-4">INTERVIEW</button><button
+                            class="reject-btn btn btn btn-outline btn-error py-4">REJECTED</button>
                     </div>
 
                 </div>
                 <!-- main part-2 -->
                 <div>
-                    <button class="btn rounded-full btn-outline"><i class="fa-solid fa-trash"></i></button>
+                    <button id="delate-btn" class="btn rounded-full btn-outline"><i class="fa-solid fa-trash"></i></button>
                 </div>
         `
         filteredSection.appendChild(div)

@@ -24,7 +24,8 @@
     <!-- <h1>hello</h1> -->
     <header class="max-w-7/10 mx-auto text-3xl py-16 ">
         <h1 class="text-[#002C5C] text-6xl font-bold">Job Application Tracker</h1>
-        <div class="grid grid-cols-3 gap-8 mt-10">
+        <div
+            class="grid grid-cols-3 gap-8 mt-10 min-[390px]:flex min-[390px]:flex-row md:grid md:grid-cols-3 lg:grid lg:grid-cols-3 xl:grid xl:grid-cols-3 2xl:grid 2xl:grid-cols-3">
             <div class="bg-white p-4 card card-dash">
                 <p class="text-[18px]">Total</p>
                 <p id="total" class="text-[#002C5C] font-semibold">0</p>
@@ -57,7 +58,7 @@
         </div>
 
         <!-- Filtred Section -->
-        <section id="filteredSection" class="hidden">
+        <section id="filteredSection" class="hidden space-y-4">
 
         </section>
 
@@ -87,9 +88,12 @@
                 </div>
                 <!-- main part-2 -->
                 <div>
-                    <button class="btn rounded-full btn-outline"><i class="fa-solid fa-trash"></i></button>
+                    <button id="delate-btn" class="btn rounded-full btn-outline"><i
+                            class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
+
+
             <!-- card 2 -->
             <div class="bg-white flex justify-between p-3 rounded-2xl">
                 <!-- main part-1 -->
@@ -107,7 +111,8 @@
                     <!-- part 2 -->
                     <div>
                         <p class="staTus badge bg-gray-300 p-4">NOT APPLIED</p>
-                        <p>Create stunning web experiences for high-profile clients. Must have portfolio and experience
+                        <p class="nodes">Create stunning web experiences for high-profile clients. Must have portfolio
+                            and experience
                             with modern web design trends.</p>
                     </div>
                     <div class=" flex gap-3">
@@ -118,9 +123,11 @@
                 </div>
                 <!-- main part-2 -->
                 <div>
-                    <button class="btn rounded-full btn-outline"><i class="fa-solid fa-trash"></i></button>
+                    <button id="delate-btn" class="btn rounded-full btn-outline"><i
+                            class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
+
             <!-- card 3 -->
             <div class="bg-white flex justify-between p-3 rounded-2xl">
                 <!-- main part-1 -->
@@ -137,10 +144,10 @@
                     </div>
                     <!-- part 2 -->
                     <div>
-                        <p class="staTus">NOT APPLIED</p>
-                        <p>Transform complex data into compelling visualizations. Required skills: D3.js, React, and
-                            strong analytical thinking.
-                        </p>
+                        <p class="staTus badge bg-gray-300 p-4">NOT APPLIED</p>
+                        <p class="nodes">Transform complex data into compelling visualizations. Required skills: D3.js,
+                            React, and
+                            strong analytical thinking.</p>
                     </div>
                     <div class=" flex gap-3">
                         <button class="interview-btn btn btn-outline btn-accent">INTERVIEW</button><button
@@ -150,9 +157,11 @@
                 </div>
                 <!-- main part-2 -->
                 <div>
-                    <button class="btn rounded-full btn-outline"><i class="fa-solid fa-trash"></i></button>
+                    <button id="delate-btn" class="btn rounded-full btn-outline"><i
+                            class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
+
             <!-- card 4 -->
             <div class="bg-white flex justify-between p-3 rounded-2xl">
                 <!-- main part-1 -->
@@ -169,8 +178,9 @@
                     </div>
                     <!-- part 2 -->
                     <div>
-                        <p class="staTus">NOT APPLIED</p>
-                        <p>Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps
+                        <p class="staTus badge bg-gray-300 p-4">NOT APPLIED</p>
+                        <p class="nodes">Design and maintain scalable backend systems using Python and AWS. Work with
+                            modern DevOps
                             practices and cloud infrastructure.</p>
                     </div>
                     <div class=" flex gap-3">
@@ -181,9 +191,12 @@
                 </div>
                 <!-- main part-2 -->
                 <div>
-                    <button class="btn rounded-full btn-outline"><i class="fa-solid fa-trash"></i></button>
+                    <button id="delate-btn" class="btn rounded-full btn-outline"><i
+                            class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
+
+
             <!-- card 5 -->
             <div class="bg-white flex justify-between p-3 rounded-2xl">
                 <!-- main part-1 -->
@@ -200,8 +213,9 @@
                     </div>
                     <!-- part 2 -->
                     <div>
-                        <p class="staTus">NOT APPLIED</p>
-                        <p>Create beautiful and functional user interfaces for our suite of products. Strong design
+                        <p class="staTus badge bg-gray-300 p-4">NOT APPLIED</p>
+                        <p class="nodes">Create beautiful and functional user interfaces for our suite of products.
+                            Strong design
                             skills and frontend development expertise required.</p>
                     </div>
                     <div class=" flex gap-3">
@@ -212,9 +226,12 @@
                 </div>
                 <!-- main part-2 -->
                 <div>
-                    <button class="btn rounded-full btn-outline"><i class="fa-solid fa-trash"></i></button>
+                    <button id="delate-btn" class="btn rounded-full btn-outline"><i
+                            class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
+
+
             <!-- card 6 -->
             <div class="bg-white flex justify-between p-3 rounded-2xl">
                 <!-- main part-1 -->
@@ -231,8 +248,9 @@
                     </div>
                     <!-- part 2 -->
                     <div>
-                        <p class="staTus">NOT APPLIED</p>
-                        <p>Build enterprise applications with JavaScript and modern frameworks. We offer competitive
+                        <p class="staTus badge bg-gray-300 p-4">NOT APPLIED</p>
+                        <p class="nodes">Build enterprise applications with JavaScript and modern frameworks. We offer
+                            competitive
                             compensation, health insurance, and professional development opportunities.</p>
                     </div>
                     <div class=" flex gap-3">
@@ -243,9 +261,12 @@
                 </div>
                 <!-- main part-2 -->
                 <div>
-                    <button class="btn rounded-full btn-outline"><i class="fa-solid fa-trash"></i></button>
+                    <button id="delate-btn" class="btn rounded-full btn-outline"><i
+                            class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
+
+
             <!-- card 7 -->
             <div class="bg-white flex justify-between p-3 rounded-2xl">
                 <!-- main part-1 -->
@@ -262,8 +283,9 @@
                     </div>
                     <!-- part 2 -->
                     <div>
-                        <p class="staTus">NOT APPLIED</p>
-                        <p>Join our fast-growing startup and work on our core platform. Experience with Node.js and
+                        <p class="staTus badge bg-gray-300 p-4">NOT APPLIED</p>
+                        <p class="nodes">Join our fast-growing startup and work on our core platform. Experience with
+                            Node.js and
                             React required. Great benefits and equity package included.</p>
                     </div>
                     <div class=" flex gap-3">
@@ -274,9 +296,12 @@
                 </div>
                 <!-- main part-2 -->
                 <div>
-                    <button class="btn rounded-full btn-outline"><i class="fa-solid fa-trash"></i></button>
+                    <button id="delate-btn" class="btn rounded-full btn-outline"><i
+                            class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
+
+
             <!-- card 8 -->
             <div class="bg-white flex justify-between p-3 rounded-2xl">
                 <!-- main part-1 -->
@@ -293,8 +318,9 @@
                     </div>
                     <!-- part 2 -->
                     <div>
-                        <p class="staTus">NOT APPLIED</p>
-                        <p>We are looking for an experienced Frontend Developer to build scalable web applications using
+                        <p class="staTus badge bg-gray-300 p-4">NOT APPLIED</p>
+                        <p class="nodes">We are looking for an experienced Frontend Developer to build scalable web
+                            applications using
                             React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                     </div>
                     <div class=" flex gap-3">
@@ -305,9 +331,12 @@
                 </div>
                 <!-- main part-2 -->
                 <div>
-                    <button class="btn rounded-full btn-outline"><i class="fa-solid fa-trash"></i></button>
+                    <button id="delate-btn" class="btn rounded-full btn-outline"><i
+                            class="fa-solid fa-trash"></i></button>
                 </div>
             </div>
+
+
         </section>
     </main>
     <script src="./script.js"></script>
