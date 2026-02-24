@@ -8,11 +8,21 @@ let rejected = document.getElementById('rejected');
 let secondCount = document.getElementById('secondCount')
 
 
+// Delate Button
+// const delateBtn = document.getElementsByClassName('delate-btn');
+// delateBtn.addEventListener("click", function (event) {
+//     const delate = this.parentNode.parentNode.classList.add('hidden');
+// calculateCount();
+// delate.remove();
+//})
 
-const delateBtn = document.getElementById('delate-btn').addEventListener("click", function () {
-    const delate = this.parentNode.parentNode;
-    delate.remove();
-})
+// if (event.target.closest('.delete-btn')) {
+
+//     const card = event.target.closest('.job-card');
+//     card.remove();
+
+//     calculateCount();
+// }
 
 
 
@@ -79,6 +89,8 @@ function toggleStyle(id) {
 mainContainer.addEventListener('click', function (event) {
 
     console.log(event.target.classList.contains('interview-btn'))
+
+
 
     if (event.target.classList.contains('interview-btn')) {
         const parentNode = event.target.parentNode.parentNode;
@@ -217,7 +229,7 @@ function renderInterview() {
 
 function renderReject() {
 
-    if (interviewList.length === 0) {
+    if (rejectedList.length === 0) {
         filteredSection.innerHTML = `
         <div class="text-center flex flex-col justify-center align-middle py-60">
         <div class="flex justify-center">
