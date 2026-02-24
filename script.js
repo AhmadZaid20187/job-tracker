@@ -117,7 +117,7 @@ function toggleStyle(id) {
     } else if (id == 'rejected-filter-btn') {
         allJobsSection.classList.add('hidden');
         filteredSection.classList.remove('hidden');
-        secondCount.innerText = `${rejectedList.innerText} of ${allJobsSection.children.length}`
+        secondCount.innerText = `${rejectedList.length} of ${allJobsSection.children.length}`;
         renderReject();
     }
 
