@@ -78,11 +78,12 @@ function calculateCount() {
     //secondCount
     secondCount.innerText = allJobsSection.children.length;
 
-    if (allJobsSection.children.length === 0 && currentStatus === 'all-filter-btn') {
+    // Change the condition to match your initial variable or the button ID
+    if (allJobsSection.children.length === 0 && (currentStatus === 'all' || currentStatus === 'all-filter-btn')) {
         allJobsSection.innerHTML = `
-        <div class="text-center flex flex-col justify-center align-middle py-60">
+    <div class="text-center flex flex-col justify-center align-middle py-60">
         <div class="flex justify-center">
-        <img class="" src="./img/jobs.png">
+            <img src="./img/jobs.png">
         </div>
         <p class="text-2xl text-[#002C5C]">No jobs available</p>
         <p class="text-[#64748B]">Check back soon for new job opportunities</p>
