@@ -109,13 +109,16 @@ function toggleStyle(id) {
     if (id == 'interview-filter-btn') {
         allJobsSection.classList.add('hidden');
         filteredSection.classList.remove('hidden');
+        secondCount.innerText = `${interview.innerText} of 8`
         renderInterview();
     } else if (id == 'all-filter-btn') {
         allJobsSection.classList.remove('hidden');
         filteredSection.classList.add('hidden');
+        // secondCount.innerText = `${interview.innerText} of 8`
     } else if (id == 'rejected-filter-btn') {
         allJobsSection.classList.add('hidden');
         filteredSection.classList.remove('hidden');
+        secondCount.innerText = `${interview.innerText} of 8`
         renderReject();
     }
 
