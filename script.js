@@ -51,12 +51,6 @@ delateBtn8.addEventListener('click', function () {
     calculateCount();
 })
 
-// const delateBtn = document.getElementsByClassName('delate-btn');
-// delateBtn.addEventListener("click", function (event) {
-//     const delate = this.parentNode.parentNode.classList.add('hidden');
-// calculateCount();
-// delate.remove();
-//})
 
 
 
